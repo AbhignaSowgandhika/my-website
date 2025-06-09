@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #1a0023;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  cursor: none;
+}
+
+/* Force cursor: none for all elements */
+*,
+a,
+button {
+  cursor: none !important;
+}
+
+/* Custom neon cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 0 8px white, 0 0 16px white;
+  transition:
+    transform 0.1s ease,
+    width 0.2s ease,
+    height 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* Expand on hover effect */
+.custom-cursor.expand {
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 0 12px white, 0 0 24px white;
+}
